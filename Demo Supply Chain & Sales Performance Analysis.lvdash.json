@@ -1349,7 +1349,7 @@
                   "scale": {
                     "type": "categorical",
                     "sort": {
-                      "by": "y-reversed"
+                      "by": "natural-order"
                     }
                   },
                   "displayName": "region"
@@ -2344,6 +2344,106 @@
             "y": 0,
             "width": 3,
             "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "bad21ad8",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "787ddb68",
+                  "fields": [
+                    {
+                      "name": "n_nationkey",
+                      "expression": "`n_nationkey`"
+                    },
+                    {
+                      "name": "n_name",
+                      "expression": "`n_name`"
+                    },
+                    {
+                      "name": "n_regionkey",
+                      "expression": "`n_regionkey`"
+                    },
+                    {
+                      "name": "n_comment",
+                      "expression": "`n_comment`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "n_nationkey",
+                    "title": "n_nationkey",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number",
+                    "displayName": "n_nationkey"
+                  },
+                  {
+                    "fieldName": "n_name",
+                    "title": "n_name",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string",
+                    "displayName": "n_name"
+                  },
+                  {
+                    "fieldName": "n_regionkey",
+                    "title": "n_regionkey",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number",
+                    "displayName": "n_regionkey"
+                  },
+                  {
+                    "fieldName": "n_comment",
+                    "title": "n_comment",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string",
+                    "displayName": "n_comment"
+                  }
+                ]
+              },
+              "invisibleColumns": [],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "title": "Region Distribution",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 11,
+            "width": 2,
+            "height": 4
           }
         }
       ],
